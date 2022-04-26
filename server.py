@@ -22,7 +22,8 @@ Access a breakfast at /breakfast/id<br>
 
 Make a POST request to /breakfast to create a breakfast<br>
 
-Access a <em>random</em> breakfast at /breakfast/random 😮
+Access a <em>random</em> breakfast at /breakfast/random 😮<br><br>
+<img height="400px" src="https://media.istockphoto.com/photos/breakfast-with-bacon-eggs-pancakes-and-toast-picture-id533645537?k=20&m=533645537&s=612x612&w=0&h=KJXCpAo9XQvMI_djcnRMSsz_Y7OGS6z3-8VThxWyR0Q=">
 """
 
 @server.route('/breakfast') 
