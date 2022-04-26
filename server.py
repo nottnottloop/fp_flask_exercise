@@ -13,7 +13,7 @@ breakfasts = [
 
 @server.route('/') 
 def home(): 
-    return """<style>body {font-family: sans-serif;}</style>
+    return """<style>body {font-family: sans-serif; background-color: black; color: lime;}</style>
 Welcome to the breakfast API<br>
 
 Access all breakfasts at /breakfast<br>
