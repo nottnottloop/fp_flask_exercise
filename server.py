@@ -12,8 +12,7 @@ breakfasts = [
 
 @server.route('/') 
 def home(): 
-    return """
-Welcome to the breakfast API<br>
+    return """Welcome to the breakfast API<br>
 
 Access all breakfasts at /breakfast<br>
 
