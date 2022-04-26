@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
+import random
 
 server = Flask(__name__)
 breakfasts = [
@@ -12,13 +13,16 @@ breakfasts = [
 
 @server.route('/') 
 def home(): 
-    return """Welcome to the breakfast API<br>
+    return """<style>body {font-family: sans-serif;}</style>
+Welcome to the breakfast API<br>
 
 Access all breakfasts at /breakfast<br>
 
 Access a breakfast at /breakfast/id<br>
 
-Make a POST request to /breakfast to create a breakfast
+Make a POST request to /breakfast to create a breakfast<br>
+
+Access a <em>random</em> breakfast at /breakfast/random 😮
 """
 
 @server.route('/breakfast') 
@@ -32,6 +36,10 @@ def return_breakfast(breakfast_id):
         return breakfasts[breakfast_id]
     else:
         return 'Breakfast not found!'
+
+@server.route('/breakfast/random') 
+def return_random_breakfast(): 
+    return breakfasts[random.randint(0, len(breakfasts) - 1)]
 
 @server.route('/breakfast', methods=['POST']) 
 def create_breakfast(): 
